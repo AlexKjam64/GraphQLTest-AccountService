@@ -1,0 +1,56 @@
+type Query{
+    username(id: ID): Username
+}
+
+type Username{
+    id: ID
+    username: String
+    name: Name
+    phone: Phone
+    email: Email
+    games: [Game]
+    familyMembers: [Family]
+}
+
+type Family{
+    id: ID
+    username: String
+    familyId: String
+    name: Name
+    phone: Phone
+    email: Email
+    games: [Game]
+}
+
+type Name{
+    id: ID
+    firstName: String
+    lastName: String
+    middleInit: String
+}
+
+type Phone{
+    id: ID
+    countryCode: Int
+    areaCode: Int
+    localNumber: Int
+}
+
+type Email{
+    id: ID
+    email: String
+}
+
+type Game{
+    id: ID
+    title: String
+    publisher: String
+    developer: String
+    series: Series
+}
+
+type Series{
+    id: ID
+    title: String
+    owner: String
+}
